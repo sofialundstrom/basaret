@@ -1,65 +1,79 @@
 import Image from "next/image";
+import { HashScrollOnLoad } from "./components/HashScrollOnLoad";
+import { Header } from "./components/Header";
+import { HuvudklassfaddrarSection } from "./components/HuvudklassfaddrarSection";
+import { KlassforstandareSection } from "./components/KlassforstandareSection";
+import { NollebokSection } from "./components/NollebokSection";
+import { NollebokButton } from "./components/NollebokButton";
+import { SponsorSection } from "./components/SponsorSection";
+
+const nolleEnkatUrl = "https://forms.gle/93zPpirHVhxPjYc58";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      <HashScrollOnLoad />
+      <Header />
+
+      <main className="bg-nollebok-cream text-nollebok-ink">
+        <section>
+          <div className="relative h-[40vh] w-full overflow-hidden md:h-[80vh]">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/group.jpg"
+              alt="Basårets faddrar framför Linköpings universitet"
+              fill
+              priority
+              className="object-cover object-[50%_27%]"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+
+          <div className="relative -mt-12 bg-nollebok-cream px-6 pb-16 pt-6 md:-mt-20 md:px-12 md:pb-20 md:pt-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <h1 className="text-3xl font-black tracking-tight md:text-4xl lg:text-5xl">
+                Välkommen Nollan!
+              </h1>
+
+              <div className="mt-8 space-y-6 text-left text-base leading-relaxed md:text-lg lg:text-xl">
+                <p>
+                  På denna sida hittar Nollan information om vad som händer
+                  under första veckan på Linköpings Universitet, den så kallade
+                  &rdquo;Nolle-veckan&rdquo;. Nolle-veckan består av både
+                  undervisning och roliga aktiviteter där alla Basårsnollan får
+                  chans att lära känna varandra. Aktiviteterna är såklart
+                  frivilliga, men vi hoppas att du vill vara med på så mycket
+                  som möjligt, Nollan!
+                </p>
+
+                <p>
+                  Viktigt att veta är att Linköpings Universitet tar kraftigt
+                  avstånd från förnedrande och kränkande nollningar som Nollan
+                  kanske hört talas om. Syftet med denna vecka är att ge Nollan
+                  en rolig start på basåret och en introduktion till livet som
+                  universitetsstudent! Vi som kommer att ta hand om dig under
+                  denna roliga period är en frisk blandning av studenter från
+                  olika tekniska utbildningar här på Campus Norrköping. För att
+                  se till så att du får en så bra start på studentlivet som
+                  möjligt kommer vi faddrar att vägleda dig genom din första
+                  vecka av studier och roliga aktiviteter.
+                </p>
+
+                <p>Det ska bli kul att ses!</p>
+
+                <div className="flex justify-center pt-4 md:pt-6">
+                  <NollebokButton href={nolleEnkatUrl}>
+                    Fyll i nolle-enkäten →
+                  </NollebokButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <KlassforstandareSection />
+        <HuvudklassfaddrarSection />
+        <NollebokSection />
+        <SponsorSection />
       </main>
-    </div>
+    </>
   );
 }

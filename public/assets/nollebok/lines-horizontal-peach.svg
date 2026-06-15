@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 442.08 37.43">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fbd4b7;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="omslag">
+    <g>
+      <line class="cls-1" x1="100.18" y1="13.8" x2="419.5" y2="12.33"/>
+      <line class="cls-1" x1="59.49" y1="25.1" x2="391.64" y2="25.1"/>
+      <line class="cls-1" x1="121.52" y1="35.93" x2="442.07" y2="34.45"/>
+      <line class="cls-1" x1="0" y1="3.15" x2="357.47" y2="1.5"/>
+    </g>
+  </g>
+</svg>

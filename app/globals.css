@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Nollebokens färgpalett */
+  --nollebok-bakgrund: #faf3e9;
+  --nollebok-text: #12120d;
+  --nollebok-lila: #dcbed9;
+  --nollebok-bla: #97d0bb;
+  --nollebok-gron: #dfecbf;
+  --nollebok-beige: #fbd4b7;
+  --nollebok-ljusrosa: #f08691;
+  --nollebok-rosa: #ec6a7a;
+
+  /* Alias som används i komponenter */
+  --background: var(--nollebok-bakgrund);
+  --foreground: var(--nollebok-text);
+  --nollebok-cream: var(--nollebok-bakgrund);
+  --nollebok-ink: var(--nollebok-text);
+  --nollebok-lavender: var(--nollebok-lila);
+  --nollebok-mint: var(--nollebok-bla);
+  --nollebok-lime: var(--nollebok-gron);
+  --nollebok-peach: var(--nollebok-beige);
+  --nollebok-coral: var(--nollebok-ljusrosa);
+  --nollebok-rose: var(--nollebok-rosa);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-nollebok-cream: var(--nollebok-cream);
+  --color-nollebok-ink: var(--nollebok-ink);
+  --color-nollebok-lavender: var(--nollebok-lavender);
+  --color-nollebok-mint: var(--nollebok-mint);
+  --color-nollebok-lime: var(--nollebok-lime);
+  --color-nollebok-coral: var(--nollebok-coral);
+  --color-nollebok-rose: var(--nollebok-rose);
+  --color-nollebok-peach: var(--nollebok-peach);
+  --color-nollebok-lila: var(--nollebok-lila);
+  --color-nollebok-bla: var(--nollebok-bla);
+  --color-nollebok-gron: var(--nollebok-gron);
+  --color-nollebok-beige: var(--nollebok-beige);
+  --color-nollebok-ljusrosa: var(--nollebok-ljusrosa);
+  --color-nollebok-rosa: var(--nollebok-rosa);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }

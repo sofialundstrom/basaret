@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225.97 223.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #100c00;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #ec6a7a;
+      }
+    </style>
+  </defs>
+  <g id="omslag">
+    <g>
+      <circle class="cls-2" cx="117.06" cy="113.91" r="108.91"/>
+      <circle class="cls-1" cx="111.91" cy="111.91" r="110.91"/>
+    </g>
+  </g>
+</svg>
