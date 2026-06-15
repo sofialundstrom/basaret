@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { InstagramFab } from "./components/InstagramFab";
 import { SiteFooter } from "./components/SiteFooter";
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Basåret – Nolleboken",
+  title: "Basåret",
   description:
     "Information om Nolleveckan för tekniskt basår på Linköpings universitet.",
 };
@@ -34,6 +35,7 @@ export default function RootLayout({
         {children}
         <InstagramFab />
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );

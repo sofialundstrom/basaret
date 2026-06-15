@@ -6,7 +6,7 @@ import { Header } from "../components/Header";
 import { aktivitetsschema } from "../data/aktivitetsschema";
 
 export const metadata = {
-  title: "Aktivitetsschema – Basåret",
+  title: "Basåret",
   description:
     "Schema över aktiviteter under Nolleveckan för tekniskt basår på Linköpings universitet.",
 };
