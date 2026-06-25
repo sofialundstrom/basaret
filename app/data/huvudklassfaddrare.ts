@@ -3,7 +3,7 @@ import type { Mentor } from "../types/mentor";
 export const huvudklassfaddrare: Mentor[] = [
   {
     name: "Albina Juhlin",
-    phone: "0700066642",
+    phone: "0760066642",
     email: "albju746@student.liu.se",
     program: "Grafisk Design & Kommunikation",
     image: "/images/huvudklassfaddrar/albina.png",
