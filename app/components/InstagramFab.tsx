@@ -5,6 +5,7 @@ import {
   BASARET_INSTAGRAM_HANDLE,
   BASARET_INSTAGRAM_URL,
 } from "../data/social";
+import { NollebokOffsetBox } from "./NollebokSectionLabel";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -61,26 +62,26 @@ export function InstagramFab() {
           id={popoverId}
           role="dialog"
           aria-label="Följ basåret på Instagram"
-          className="absolute bottom-[calc(100%+0.75rem)] right-0 w-[13.5rem]"
+          className="absolute bottom-[calc(100%+0.75rem)] right-0 w-[15.5rem] md:w-60"
         >
-          <span
-            aria-hidden
-            className="absolute inset-0 translate-x-1 translate-y-1 border-2 border-nollebok-ink bg-nollebok-bla"
-          />
-          <div className="relative border-2 border-nollebok-ink bg-nollebok-beige px-4 py-3.5">
-            <p className="text-sm font-bold leading-snug">
+          <NollebokOffsetBox
+            color="bla"
+            className="block w-full"
+            innerClassName="px-5 py-4 md:px-5 md:py-4"
+          >
+            <p className="text-base font-bold leading-snug md:text-base">
               Följ basåret på Insta
             </p>
             <a
               href={BASARET_INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
-              className="mt-2 inline-flex items-center gap-1.5 text-sm font-bold underline decoration-nollebok-ink/35 underline-offset-2 transition hover:decoration-nollebok-ink"
+              className="mt-2 inline-flex items-center gap-2 text-base font-bold underline decoration-nollebok-ink/35 underline-offset-2 transition hover:decoration-nollebok-ink md:text-base"
             >
-              <InstagramIcon className="h-4 w-4 shrink-0" />
+              <InstagramIcon className="h-5 w-5 shrink-0 md:h-5 md:w-5" />
               {BASARET_INSTAGRAM_HANDLE}
             </a>
-          </div>
+          </NollebokOffsetBox>
         </div>
       )}
 
@@ -93,14 +94,14 @@ export function InstagramFab() {
         aria-label={
           open ? "Stäng Instagram-meny" : "Öppna Instagram-länk för basåret"
         }
-        className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-nollebok-ink bg-nollebok-lila shadow-[2px_3px_0_rgba(18,18,13,0.15)] transition hover:bg-nollebok-lila/90"
+        className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-nollebok-ink bg-nollebok-lila shadow-[2px_3px_0_rgba(18,18,13,0.15)] transition hover:bg-nollebok-lila/90 md:h-[4.5rem] md:w-[4.5rem]"
       >
         {open ? (
-          <span className="text-2xl leading-none" aria-hidden>
+          <span className="text-3xl leading-none md:text-3xl" aria-hidden>
             ×
           </span>
         ) : (
-          <InstagramIcon className="h-7 w-7" />
+          <InstagramIcon className="h-8 w-8 md:h-9 md:w-9" />
         )}
       </button>
     </div>

@@ -5,7 +5,7 @@ export function HuvudklassfaddrarSection() {
   return (
     <PolaroidMentorSection
       title="Huvudklassfaddrar"
-      labelColor="beige"
+      labelColor="bla"
       description="Huvudklassfaddrarna, även kallade HKF, ansvarar för aktiviteterna under Nolleveckan som ligger utanför schemalagd studietid. Du kan också höra av dig till HKF om något känns oklart under dina första veckor på Linköpings universitet och Campus Norrköping."
       people={huvudklassfaddrare}
       rotations={[

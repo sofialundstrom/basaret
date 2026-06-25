@@ -24,7 +24,7 @@ export function PolaroidMentorSection({
   }));
 
   return (
-    <section className="bg-nollebok-cream px-6 py-16 md:px-12 md:py-20">
+    <section className="px-6 py-16 md:px-12 md:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="flex justify-center">
           <NollebokSectionLabel color={labelColor}>{title}</NollebokSectionLabel>

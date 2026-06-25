@@ -1,8 +1,11 @@
 import type { ReactNode } from "react";
 import type { DayColor } from "../types/schedule";
 
-const offsetClassName =
-  "absolute inset-0 z-0 translate-x-1.5 translate-y-1.5 border-2 border-nollebok-ink bg-nollebok-gron";
+const borderOverlayClassName =
+  "pointer-events-none absolute inset-0 z-10 border-2 border-nollebok-ink bg-transparent";
+
+const colorOffsetClassName = (color: DayColor, extra: string) =>
+  `relative z-0 block translate-x-2 translate-y-2 text-nollebok-ink ${nollebokLabelColorClasses[color]} ${extra}`;
 
 export const nollebokLabelColorClasses: Record<DayColor, string> = {
   bla: "bg-nollebok-bla",
@@ -14,8 +17,8 @@ export const nollebokLabelColorClasses: Record<DayColor, string> = {
 };
 
 const sizeClasses = {
-  lg: "px-4 py-1.5 text-xl font-black uppercase tracking-wide md:px-5 md:text-2xl",
-  sm: "px-5 py-2 text-sm font-bold uppercase tracking-wide md:px-6 md:py-2.5 md:text-base",
+  lg: "px-4 pt-1.5 pb-2.5 text-xl font-black uppercase tracking-wide md:px-5 md:pb-3 md:text-2xl",
+  sm: "px-5 pt-2 pb-2.5 text-sm font-bold uppercase tracking-wide md:px-6 md:pt-2.5 md:pb-3 md:text-base",
 };
 
 type NollebokOffsetBoxProps = {
@@ -33,10 +36,8 @@ export function NollebokOffsetBox({
 }: NollebokOffsetBoxProps) {
   return (
     <span className={`relative inline-block ${className}`}>
-      <span aria-hidden className={offsetClassName} />
-      <span
-        className={`relative z-10 block border-2 border-nollebok-ink text-nollebok-ink ${nollebokLabelColorClasses[color]} ${innerClassName}`}
-      >
+      <span aria-hidden className={borderOverlayClassName} />
+      <span className={colorOffsetClassName(color, innerClassName)}>
         {children}
       </span>
     </span>
@@ -48,6 +49,7 @@ type NollebokSectionLabelProps = {
   color?: DayColor;
   size?: "lg" | "sm";
   as?: "span" | "h2";
+  id?: string;
 };
 
 export function NollebokSectionLabel({
@@ -55,12 +57,14 @@ export function NollebokSectionLabel({
   color = "ljusrosa",
   size = "lg",
   as: Tag = "span",
+  id,
 }: NollebokSectionLabelProps) {
   return (
     <span className="relative inline-block">
-      <span aria-hidden className={offsetClassName} />
+      <span aria-hidden className={borderOverlayClassName} />
       <Tag
-        className={`relative z-10 block border-2 border-nollebok-ink text-nollebok-ink ${nollebokLabelColorClasses[color]} ${sizeClasses[size]}`}
+        id={id}
+        className={colorOffsetClassName(color, sizeClasses[size])}
       >
         {children}
       </Tag>

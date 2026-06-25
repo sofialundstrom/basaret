@@ -6,6 +6,7 @@ import {
   getReaderViews,
   nollebokPageSrc,
 } from "../data/nollebok";
+import { NollebokActionButton } from "./NollebokButton";
 
 const SWIPE_THRESHOLD = 56;
 const TAP_THRESHOLD = 10;
@@ -256,15 +257,9 @@ export function NollebokReader() {
       ? "shadow-[0_12px_32px_rgba(18,18,13,0.15)]"
       : "shadow-[0_12px_40px_rgba(18,18,13,0.18)]";
 
-  const isSinglePage = pages.length === 1;
-  const navWidthClass = isSinglePage ? widthClass : "max-w-xl";
-  const navButtonClassName = isSinglePage
-    ? "rounded-full border-2 border-nollebok-ink bg-nollebok-gron px-2.5 py-1.5 text-xs font-medium transition hover:bg-nollebok-lila disabled:cursor-not-allowed disabled:bg-nollebok-beige/60 disabled:opacity-60"
-    : "rounded-full border-2 border-nollebok-ink bg-nollebok-gron px-3 py-2 text-sm font-medium transition hover:bg-nollebok-lila disabled:cursor-not-allowed disabled:bg-nollebok-beige/60 disabled:opacity-60 md:px-4 md:text-base";
-
   return (
-    <div className="flex w-full flex-col items-center gap-6">
-      <div className={`w-full ${widthClass}`}>
+    <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6">
+      <div className={`mx-auto w-full ${widthClass}`}>
         <div
           className={`relative select-none ${shadowClass} ${
             isDragging
@@ -294,35 +289,29 @@ export function NollebokReader() {
         </div>
       </div>
 
-      <div className="flex w-full max-w-sm flex-col items-center gap-1 text-center md:hidden">
-        <p className="text-sm font-medium">{currentView.label}</p>
-        <p className="text-sm text-nollebok-ink/60">
+      <div className="flex w-full flex-col items-center gap-3">
+        <p className="text-center text-sm text-nollebok-ink/60 md:hidden">
           Svep åt sidan för att bläddra
         </p>
-      </div>
 
-      <div
-        className={`hidden w-full grid-cols-3 items-center gap-1 md:grid ${navWidthClass}`}
-      >
-        <button
-          type="button"
-          onClick={flipPrev}
-          disabled={viewIndex <= 0}
-          className={`justify-self-start ${navButtonClassName}`}
-        >
-          ← Föregående
-        </button>
-        <p className="justify-self-center px-1 text-center text-sm font-medium md:text-base">
-          {currentView.label}
-        </p>
-        <button
-          type="button"
-          onClick={flipNext}
-          disabled={viewIndex >= views.length - 1}
-          className={`justify-self-end ${navButtonClassName}`}
-        >
-          Nästa →
-        </button>
+        <div className="hidden items-center justify-center gap-3 md:flex">
+          <NollebokActionButton
+            size="icon"
+            onClick={flipPrev}
+            disabled={viewIndex <= 0}
+            aria-label="Föregående sida"
+          >
+            ←
+          </NollebokActionButton>
+          <NollebokActionButton
+            size="icon"
+            onClick={flipNext}
+            disabled={viewIndex >= views.length - 1}
+            aria-label="Nästa sida"
+          >
+            →
+          </NollebokActionButton>
+        </div>
       </div>
     </div>
   );

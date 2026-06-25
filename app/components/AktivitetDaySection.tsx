@@ -17,8 +17,8 @@ export function AktivitetDaySection({ day, isLast = false }: AktivitetDaySection
       id={dayAnchorId(day.date)}
       className={`scroll-mt-6 w-full max-w-2xl md:scroll-mt-8 ${isLast ? "" : "pb-12 md:pb-16"}`}
     >
-      <div className="mb-6 md:mb-8">
-        <NollebokSectionLabel as="h2" size="sm" color={day.color}>
+      <div className="mb-6 pr-1 md:mb-8 md:pr-0">
+        <NollebokSectionLabel as="h2" size="lg" color={day.color}>
           {day.weekday} – {day.date}
         </NollebokSectionLabel>
       </div>

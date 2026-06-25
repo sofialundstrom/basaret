@@ -3,16 +3,16 @@ import type { Mentor } from "../types/mentor";
 export const huvudklassfaddrare: Mentor[] = [
   {
     name: "Albina Juhlin",
-    phone: null,
-    email: null,
+    phone: "0700066642",
+    email: "albju746@student.liu.se",
     program: "Grafisk Design & Kommunikation",
     image: "/images/huvudklassfaddrar/albina.png",
     imageFocus: "face",
   },
   {
     name: "Lucas Linder",
-    phone: null,
-    email: null,
+    phone: "0725080455",
+    email: "lucli454@student.liu.se",
     program: "Samhällsbyggnad & Logistik",
     image: "/images/huvudklassfaddrar/lucas.png",
     imageFocus: "face",
