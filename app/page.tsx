@@ -9,7 +9,7 @@ import { NollebokEdgeDecor } from "./components/NollebokEdgeDecor";
 import { NollebokSectionDivider } from "./components/NollebokSectionDivider";
 import { SponsorSection } from "./components/SponsorSection";
 
-const nolleEnkatUrl = "https://forms.gle/93zPpirHVhxPjYc58";
+const nolleEnkatUrl = "https://forms.gle/KUT7PoUNN38byMLD8";
 
 export default function Home() {
   return (
