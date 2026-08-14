@@ -15,11 +15,4 @@ export const klassforstandare: Mentor[] = [
     program: "Energi, Miljö & Management",
     image: "/images/klassforstandare/maya.png",
   },
-  {
-    name: "Stefania Randolfi",
-    phone: "0793496704",
-    email: "stefrand@me.com",
-    program: "Tillämpad Etologi & Djurbiologi",
-    image: "/images/klassforstandare/stefania.png",
-  },
 ];

@@ -12,7 +12,7 @@ export const aktivitetsschema: ScheduleDay[] = [
         location: "A: K21, B: K22",
         alcohol: false,
         description:
-          "Nollan bjuds på lunch, det finns också chans att pynta sitt Nolleband.",
+          "Nollan kan möta studenter i overaller på Skvallertorget för att sedan bli bjudna på lunch. Det finns även chans att pynta sitt Nolleband!",
       },
       {
         header: "Campus-rundvandring",
