@@ -15,10 +15,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://basaret.se";
+const title = "Basåret";
+const description =
+  "Information om Nolleveckan för tekniskt basår på Linköpings universitet.";
+
 export const metadata: Metadata = {
-  title: "Basåret",
-  description:
-    "Information om Nolleveckan för tekniskt basår på Linköpings universitet.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: title,
+    locale: "sv_SE",
+    type: "website",
+    images: [
+      {
+        url: "/images/og.jpg",
+        width: 1600,
+        height: 1071,
+        alt: "Basårets faddrar framför Linköpings universitet",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/og.jpg"],
+  },
 };
 
 export default function RootLayout({
