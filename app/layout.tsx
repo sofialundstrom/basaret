@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/og.jpg",
-        width: 1600,
-        height: 1071,
-        alt: "Basårets faddrar framför Linköpings universitet",
+        width: 2400,
+        height: 1103,
+        alt: "Campus Norrköping, Linköpings universitet",
       },
     ],
   },

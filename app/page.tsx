@@ -20,11 +20,13 @@ export default function Home() {
       <main className="bg-nollebok-cream text-nollebok-ink">
         <div className="relative h-[32vh] w-full overflow-hidden md:h-[58vh]">
           <Image
-            src="/images/group.jpg"
-            alt="Basårets faddrar framför Linköpings universitet"
+            src="/images/campus-norrkoping-sommar.jpg"
+            alt="Campus Norrköping, Linköpings universitet"
             fill
             priority
-            className="object-cover object-[50%_27%]"
+            quality={90}
+            sizes="100vw"
+            className="object-cover object-[50%_42%]"
           />
         </div>
 
