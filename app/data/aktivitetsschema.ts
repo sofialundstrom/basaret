@@ -9,15 +9,23 @@ export const aktivitetsschema: ScheduleDay[] = [
       {
         header: "Första lunchen",
         time: "12:00-13:00",
-        location: "A: K21, B: K22",
+        location: "A: TP51, B: TP53, C: TP55",
         alcohol: false,
         description:
           "Nollan kan möta studenter i overaller på Skvallertorget för att sedan bli bjudna på lunch. Det finns även chans att pynta sitt Nolleband!",
       },
       {
+        header: "Informationstillfälle",
+        time: "13:15-14:00",
+        location: "K4",
+        alcohol: false,
+        description:
+          "Nollan får information om den kommande mottagningsveckan.",
+      },
+      {
         header: "Campus-rundvandring",
-        time: "15:15-17:00",
-        location: "A: K21, B: K22",
+        time: "14:15-16:00",
+        location: "K4",
         alcohol: false,
         description:
           "Nollan visas runt på campus av faddrar för att Nollan ska kunna hitta bättre samt få ansikte på studentfiket och Trappan.",
@@ -62,7 +70,7 @@ export const aktivitetsschema: ScheduleDay[] = [
       {
         header: "Pluggstuga / Häng",
         time: "15:00-18:00",
-        location: "TP42",
+        location: "A: TP51, B: TP53, C: TP55",
         alcohol: false,
         description:
           "Nollan kan få hjälp med sina studier och ställa frågor till erfarna faddrar. Även ett tillfälle för Nollan att ladda upp inför Korvgrillningen!",
@@ -85,15 +93,15 @@ export const aktivitetsschema: ScheduleDay[] = [
       {
         header: "Infoföreläsning",
         time: "12:00-13:00",
-        location: "TP42",
+        location: "TP1",
         alcohol: false,
         description:
           "Vi har en kort föreläsning om studentlivet och säljer fler biljetter till sittningen.",
       },
       {
         header: "Pluggstuga / Häng",
-        time: "15:15-17:45",
-        location: "TP42",
+        time: "15:15-18:00",
+        location: "A: TP51, B: TP53, C: TP53",
         alcohol: false,
         description:
           "Nollan kan få hjälp med sina studier och ställa frågor till erfarna faddrar.",
@@ -116,7 +124,7 @@ export const aktivitetsschema: ScheduleDay[] = [
       {
         header: "Pluggstuga / Häng",
         time: "10:15-12:00",
-        location: "TP42",
+        location: "A: TP42, B: TP53, C: TP54",
         alcohol: false,
         description:
           "Nollan kan få hjälp med sina studier och ställa frågor till erfarna faddrar.",
@@ -139,7 +147,7 @@ export const aktivitetsschema: ScheduleDay[] = [
       {
         header: "Pluggstuga / Häng",
         time: "15:15-18:00",
-        location: "TP42",
+        location: "A: TP56, B: TP56, C: TP55",
         alcohol: false,
         description:
           "Nollan kan få hjälp med sina studier, ställa frågor till erfarna faddrar och leka en massa roliga lekar!",
@@ -177,7 +185,7 @@ export const aktivitetsschema: ScheduleDay[] = [
       {
         header: "Fördrink",
         time: "16:30-18:00",
-        location: "Dalkarlen (DK)",
+        location: "Vattentornets tak",
         alcohol: true,
         description: "Vi taggar till inför finsittningen tillsammans!",
       },
