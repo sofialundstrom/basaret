@@ -7,6 +7,14 @@ export const aktivitetsschema: ScheduleDay[] = [
     color: "bla",
     activities: [
       {
+        header: "Upprop",
+        time: "10:00-10:30",
+        location: "K4",
+        alcohol: false,
+        description:
+          "Det är obligatoriskt för Nollan att gå på uppropet för att få behålla sin plats på basåret!",
+      },
+      {
         header: "Första lunchen",
         time: "12:00-13:00",
         location: "A: TP51, B: TP53, C: TP55",
